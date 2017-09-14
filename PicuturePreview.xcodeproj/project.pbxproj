@@ -14,6 +14,7 @@
 		0395422A1F6A6B5400D5D353 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039542281F6A6B5400D5D353 /* LaunchScreen.storyboard */; };
 		039542351F6A6B5400D5D353 /* PicuturePreviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039542341F6A6B5400D5D353 /* PicuturePreviewTests.swift */; };
 		039542401F6A6B5400D5D353 /* PicuturePreviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0395423F1F6A6B5400D5D353 /* PicuturePreviewUITests.swift */; };
+		03A23A301F6B0AE20099ACEE /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A23A2F1F6B0AE20099ACEE /* PreviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		0395423B1F6A6B5400D5D353 /* PicuturePreviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PicuturePreviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0395423F1F6A6B5400D5D353 /* PicuturePreviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicuturePreviewUITests.swift; sourceTree = "<group>"; };
 		039542411F6A6B5400D5D353 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03A23A2F1F6B0AE20099ACEE /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		0395421E1F6A6B5400D5D353 /* PicuturePreview */ = {
 			isa = PBXGroup;
 			children = (
+				03A23A2F1F6B0AE20099ACEE /* PreviewViewController.swift */,
 				0395421F1F6A6B5400D5D353 /* AppDelegate.swift */,
 				039542211F6A6B5400D5D353 /* ViewController.swift */,
 				039542231F6A6B5400D5D353 /* Main.storyboard */,
@@ -193,7 +196,7 @@
 				TargetAttributes = {
 					0395421B1F6A6B5400D5D353 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 84ZS9U8SU6;
+						DevelopmentTeam = 48KBV2T232;
 						ProvisioningStyle = Automatic;
 					};
 					0395422F1F6A6B5400D5D353 = {
@@ -264,6 +267,7 @@
 			files = (
 				039542221F6A6B5400D5D353 /* ViewController.swift in Sources */,
 				039542201F6A6B5400D5D353 /* AppDelegate.swift in Sources */,
+				03A23A301F6B0AE20099ACEE /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 84ZS9U8SU6;
+				DEVELOPMENT_TEAM = 48KBV2T232;
 				INFOPLIST_FILE = PicuturePreview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bocchi.PicuturePreview;
@@ -430,7 +434,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 84ZS9U8SU6;
+				DEVELOPMENT_TEAM = 48KBV2T232;
 				INFOPLIST_FILE = PicuturePreview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Bocchi.PicuturePreview;
@@ -516,6 +520,7 @@
 				039542461F6A6B5400D5D353 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		039542471F6A6B5400D5D353 /* Build configuration list for PBXNativeTarget "PicuturePreviewTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +529,7 @@
 				039542491F6A6B5400D5D353 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0395424A1F6A6B5400D5D353 /* Build configuration list for PBXNativeTarget "PicuturePreviewUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +538,7 @@
 				0395424C1F6A6B5400D5D353 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
