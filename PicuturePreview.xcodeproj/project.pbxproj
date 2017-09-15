@@ -15,6 +15,7 @@
 		039542351F6A6B5400D5D353 /* PicuturePreviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039542341F6A6B5400D5D353 /* PicuturePreviewTests.swift */; };
 		039542401F6A6B5400D5D353 /* PicuturePreviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0395423F1F6A6B5400D5D353 /* PicuturePreviewUITests.swift */; };
 		03A23A301F6B0AE20099ACEE /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A23A2F1F6B0AE20099ACEE /* PreviewViewController.swift */; };
+		03A23A321F6B0F350099ACEE /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A23A311F6B0F350099ACEE /* Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0395423F1F6A6B5400D5D353 /* PicuturePreviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicuturePreviewUITests.swift; sourceTree = "<group>"; };
 		039542411F6A6B5400D5D353 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03A23A2F1F6B0AE20099ACEE /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		03A23A311F6B0F350099ACEE /* Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				03A23A2F1F6B0AE20099ACEE /* PreviewViewController.swift */,
+				03A23A311F6B0F350099ACEE /* Extention.swift */,
 				0395421F1F6A6B5400D5D353 /* AppDelegate.swift */,
 				039542211F6A6B5400D5D353 /* ViewController.swift */,
 				039542231F6A6B5400D5D353 /* Main.storyboard */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03A23A321F6B0F350099ACEE /* Extention.swift in Sources */,
 				039542221F6A6B5400D5D353 /* ViewController.swift in Sources */,
 				039542201F6A6B5400D5D353 /* AppDelegate.swift in Sources */,
 				03A23A301F6B0AE20099ACEE /* PreviewViewController.swift in Sources */,

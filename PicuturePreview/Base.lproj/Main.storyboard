@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="-420" y="286"/>
         </scene>
-        <!--Title-->
+        <!--写真-->
         <scene sceneID="Vb5-zZ-Ple">
             <objects>
-                <viewController id="07I-1i-W2j" customClass="PreviewViewController" customModule="PicuturePreview" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="07I-1i-W2j" customClass="PreviewViewController" customModule="PicuturePreview" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Rd-KQ-Axp"/>
                         <viewControllerLayoutGuide type="bottom" id="WJh-f9-fEZ"/>
@@ -86,37 +86,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PzP-NI-Pic">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PzP-NI-Pic">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M3t-Xa-MfE">
-                                        <rect key="frame" x="0.0" y="-64" width="375" height="667"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M3t-Xa-MfE">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="M3t-Xa-MfE" firstAttribute="leading" secondItem="PzP-NI-Pic" secondAttribute="leading" id="3Hk-OI-LHY"/>
+                                    <constraint firstAttribute="trailing" secondItem="M3t-Xa-MfE" secondAttribute="trailing" id="64Z-ec-o8N"/>
+                                    <constraint firstAttribute="bottom" secondItem="M3t-Xa-MfE" secondAttribute="bottom" id="OHL-Tm-cm4"/>
+                                    <constraint firstItem="M3t-Xa-MfE" firstAttribute="top" secondItem="PzP-NI-Pic" secondAttribute="top" id="vON-wF-kfh"/>
+                                </constraints>
                             </scrollView>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ow-Ov-pc7">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YED-cs-uLa">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
-                                    <tabBarItem systemItem="favorites" id="XgK-uG-YVg"/>
-                                    <tabBarItem systemItem="more" id="kiU-Qm-l1T"/>
+                                    <barButtonItem image="tool1" id="z7W-BM-LaF">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="tapShareButton:" destination="07I-1i-W2j" id="Pbu-jp-04L"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Item" systemItem="flexibleSpace" id="JWh-vU-vUs"/>
+                                    <barButtonItem image="tool2" id="92K-dy-JxS">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="tapSaveButton:" destination="07I-1i-W2j" id="tGQ-lT-2C1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="7mg-rb-Dz0"/>
+                                    <barButtonItem image="tool3" id="aw5-ah-H8h">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="tapDelateButton:" destination="07I-1i-W2j" id="Pf7-ck-pTH"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
-                            </tabBar>
+                            </toolbar>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="8Ow-Ov-pc7" firstAttribute="leading" secondItem="7M1-NM-wxL" secondAttribute="leading" id="H3h-Ml-Nvr"/>
-                            <constraint firstItem="PzP-NI-Pic" firstAttribute="leading" secondItem="7M1-NM-wxL" secondAttribute="leading" id="Nwd-ZD-r3C"/>
-                            <constraint firstItem="WJh-f9-fEZ" firstAttribute="top" secondItem="PzP-NI-Pic" secondAttribute="bottom" id="Rbf-RI-lVw"/>
-                            <constraint firstAttribute="trailing" secondItem="PzP-NI-Pic" secondAttribute="trailing" id="U7s-9d-oSm"/>
-                            <constraint firstItem="PzP-NI-Pic" firstAttribute="top" secondItem="7M1-NM-wxL" secondAttribute="top" id="rHv-LR-P4W"/>
-                            <constraint firstAttribute="trailing" secondItem="8Ow-Ov-pc7" secondAttribute="trailing" id="uEH-Iy-MDH"/>
-                            <constraint firstItem="WJh-f9-fEZ" firstAttribute="top" secondItem="8Ow-Ov-pc7" secondAttribute="bottom" id="yCb-lt-ILi"/>
+                            <constraint firstItem="M3t-Xa-MfE" firstAttribute="width" secondItem="7M1-NM-wxL" secondAttribute="width" id="787-fb-aeD"/>
+                            <constraint firstItem="PzP-NI-Pic" firstAttribute="leading" secondItem="YED-cs-uLa" secondAttribute="leading" id="88U-EF-Dki"/>
+                            <constraint firstItem="PzP-NI-Pic" firstAttribute="top" secondItem="7M1-NM-wxL" secondAttribute="top" id="NcK-w5-vQc"/>
+                            <constraint firstItem="WJh-f9-fEZ" firstAttribute="top" secondItem="YED-cs-uLa" secondAttribute="bottom" id="PVC-xS-qF9"/>
+                            <constraint firstItem="M3t-Xa-MfE" firstAttribute="height" secondItem="7M1-NM-wxL" secondAttribute="height" id="gZx-Bb-3N7"/>
+                            <constraint firstItem="YED-cs-uLa" firstAttribute="leading" secondItem="7M1-NM-wxL" secondAttribute="leading" id="gj2-Ao-hGF"/>
+                            <constraint firstItem="PzP-NI-Pic" firstAttribute="bottom" secondItem="WJh-f9-fEZ" secondAttribute="top" id="rvz-qd-4Y9"/>
+                            <constraint firstAttribute="trailing" secondItem="YED-cs-uLa" secondAttribute="trailing" id="vO3-gH-4Ck"/>
+                            <constraint firstItem="PzP-NI-Pic" firstAttribute="trailing" secondItem="YED-cs-uLa" secondAttribute="trailing" id="ygm-Ct-T8s"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="a8m-w2-ggx">
+                    <navigationItem key="navigationItem" title="写真" id="a8m-w2-ggx">
                         <barButtonItem key="leftBarButtonItem" title="戻る" id="OIR-a5-P78">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="p6K-4M-axU" kind="unwind" unwindAction="unwindToViewControllerWithSegue:" id="4QM-B9-qXU"/>
                             </connections>
@@ -125,7 +150,7 @@
                     <connections>
                         <outlet property="previewImageView" destination="M3t-Xa-MfE" id="BsJ-Lv-fDV"/>
                         <outlet property="previewScrollView" destination="PzP-NI-Pic" id="fff-I1-dXi"/>
-                        <outlet property="toolBar" destination="8Ow-Ov-pc7" id="ZWA-Wp-IPA"/>
+                        <outlet property="toolBar" destination="YED-cs-uLa" id="Wja-DB-Cbt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2x-9Z-aDt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -153,4 +178,9 @@
             <point key="canvasLocation" x="340" y="285.60719640179911"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tool1" width="18" height="23"/>
+        <image name="tool2" width="21" height="23"/>
+        <image name="tool3" width="20" height="23"/>
+    </resources>
 </document>

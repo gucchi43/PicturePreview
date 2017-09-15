@@ -9,8 +9,8 @@
 import UIKit
 
 class PreviewViewController: UIViewController, UIScrollViewDelegate {
-
-    @IBOutlet weak var toolBar: UITabBar!
+    
+    @IBOutlet weak var toolBar: UIToolbar!
     
     var selectedImage : UIImage?
     var allPreviewFlag = false
@@ -103,10 +103,24 @@ class PreviewViewController: UIViewController, UIScrollViewDelegate {
             toolBar.isHidden = true
             navigationController?.navigationBar.isHidden = true
             allPreviewFlag = true
+            previewScrollView.backgroundColor = UIColor(hex: "000000")
         }else {
             toolBar.isHidden = false
             navigationController?.navigationBar.isHidden = false
             allPreviewFlag = false
+            previewScrollView.backgroundColor = UIColor(hex: "FAFAFA")
         }
+    }
+    
+    @IBAction func tapShareButton(_ sender: Any) {
+        print("tapShareButton")
+    }
+    
+    @IBAction func tapSaveButton(_ sender: Any) {
+        print("tapSaveButton")
+    }
+    
+    @IBAction func tapDelateButton(_ sender: Any) {
+        print("tapDelateButton")
     }
 }
