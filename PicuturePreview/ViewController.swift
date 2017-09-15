@@ -35,7 +35,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellSize:CGFloat = self.view.frame.size.width/2-2
+        let cellSize:CGFloat = self.view.frame.size.width/2
         return CGSize(width: cellSize, height: cellSize)
     }
     
@@ -47,24 +47,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return cell
     }
     
-    // Cell が選択された場合
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        // [indexPath.row] から画像名を探し、UImage を設定
         selectedImage = UIImage(named:photoStringArray[indexPath.row])
         if selectedImage != nil {
-            // SubViewController へ遷移するために Segue を呼び出す
             performSegue(withIdentifier: "toPreview",sender: nil)
         }
         
     }
     
-    // Segue 準備
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         if (segue.identifier == "toPreview") {
             let navigationViewController = segue.destination as! UINavigationController
             let preVC = navigationViewController.viewControllers[0] as! PreviewViewController
-            // SubViewController のselectedImgに選択された画像を設定する
             preVC.selectedImage = selectedImage
         }
     }

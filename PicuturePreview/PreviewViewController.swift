@@ -21,9 +21,6 @@ class PreviewViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.hidesBottomBarWhenPushed = true
-        navigationController?.popViewController(animated: true)
-        
         // スクロールビューの設定
         self.previewScrollView.delegate = self
         self.previewScrollView.minimumZoomScale = 1
@@ -34,6 +31,7 @@ class PreviewViewController: UIViewController, UIScrollViewDelegate {
         
         myInit()
         
+        //Gesture
         let doubleTapGesture = UITapGestureRecognizer(target: self, action:#selector(self.doubleTap))
         doubleTapGesture.numberOfTapsRequired = 2
         self.previewImageView.addGestureRecognizer(doubleTapGesture)
@@ -43,7 +41,6 @@ class PreviewViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func myInit() {
-        // 画像を読み込んで配置する
         if selectedImage != nil{
             previewImageView?.image = selectedImage
             previewImageView?.isUserInteractionEnabled = true
@@ -53,17 +50,12 @@ class PreviewViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         //print("pinch")
         return self.previewImageView
     }
     
-    func doubleTap(gesture: UITapGestureRecognizer) -> Void {
+    @objc func doubleTap(gesture: UITapGestureRecognizer) -> Void {
         //print(self.myScrollView.zoomScale)
         if (self.previewScrollView.zoomScale < self.previewScrollView.maximumZoomScale) {
             let newScale = self.previewScrollView.zoomScale * 3
@@ -88,16 +80,11 @@ class PreviewViewController: UIViewController, UIScrollViewDelegate {
         )
     }
     
-    func singleTap(gesture: UITapGestureRecognizer) -> Void {
-        if self.previewScrollView.zoomScale == 1.0{
-            print("ズーム無し状態")
-            chengeHederandFoter()
-        }else {
-            print("ズームあり状態")
-            chengeHederandFoter()
-        }
+    @objc func singleTap(gesture: UITapGestureRecognizer) -> Void {
+        chengeHederandFoter()
     }
     
+    //ヘッダー、フッダーの表示切り替え
     func chengeHederandFoter(){
         if allPreviewFlag == false {
             toolBar.isHidden = true
