@@ -24,7 +24,7 @@ class PreviewViewController: UIViewController, UIScrollViewDelegate {
         // スクロールビューの設定
         self.previewScrollView.delegate = self
         self.previewScrollView.minimumZoomScale = 1
-        self.previewScrollView.maximumZoomScale = 8
+        self.previewScrollView.maximumZoomScale = 3
         self.previewScrollView.isScrollEnabled = true
         self.previewScrollView.showsHorizontalScrollIndicator = true
         self.previewScrollView.showsVerticalScrollIndicator = true
