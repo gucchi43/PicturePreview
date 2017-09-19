@@ -46,7 +46,7 @@ class PreviewViewController: UIViewController, UIScrollViewDelegate {
             previewImageView?.isUserInteractionEnabled = true
             previewImageView?.contentMode = UIViewContentMode.scaleAspectFit
         }else {
-            print("写真がない")
+            print("No picture.")
         }
     }
     
@@ -87,16 +87,22 @@ class PreviewViewController: UIViewController, UIScrollViewDelegate {
     //ヘッダー、フッダーの表示切り替え
     func chengeHederandFoter(){
         if allPreviewFlag == false {
-            toolBar.isHidden = true
-            navigationController?.navigationBar.isHidden = true
             allPreviewFlag = true
             previewScrollView.backgroundColor = UIColor(hex: "000000")
+            UIView.animate(withDuration: 0.2) {
+                self.toolBar.alpha = 0
+                self.navigationController?.navigationBar.alpha = 0
+                
+            }
         }else {
-            toolBar.isHidden = false
-            navigationController?.navigationBar.isHidden = false
             allPreviewFlag = false
             previewScrollView.backgroundColor = UIColor(hex: "FAFAFA")
+            UIView.animate(withDuration: 0.2) {
+                self.toolBar.alpha = 1.0
+                self.navigationController?.navigationBar.alpha = 1.0
+            }
         }
+        
     }
     
     @IBAction func tapShareButton(_ sender: Any) {
